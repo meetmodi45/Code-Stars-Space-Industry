@@ -1,3 +1,6 @@
+/* styles.css */
+
+/* Reset and global styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +11,7 @@ html, body {
     height: 100%;
     width: 100%;
     cursor: none;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow: hidden;
     margin: 0;
 }
 
@@ -16,12 +19,52 @@ html, body {
     height: 25px;
     width: 20px;
     position: fixed;
-    z-index: 999; /* Ensure the cursor is above other content */
-    pointer-events: none; /* Prevent cursor from interfering with mouse events */
-    background-image: url('cursor.png'); /* Specify the cursor image */
-    background-size: cover; /* Ensure the image covers the cursor area */
-    background-repeat: no-repeat; /* Prevent repeating the image */
+    z-index: 999;
+    pointer-events: none;
+    background-image: url('cursor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+#rocket-animation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: black;
+    z-index: 1000;
+    transition: opacity 2s ease-out; /* Smooth fade-out */
+}
+
+#rocket {
+    height:400px;
+    width: 250px;
+    animation: launch 2s forwards;
+    transition: opacity 2s ease-out;
+}
+#rocket-animation.hide {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction with the hidden element */
+}
+
+@keyframes launch {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+/* Hide the rocket animation after it's done */
+.hide {
+    display: none;
+}
+
+/* Rest of your CSS for navigation, page content, etc. */
 
 #nav {
     height: 10vh;
@@ -35,14 +78,14 @@ html, body {
     top: 0;
     padding: 0 45px;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.25); /* Ensure the nav bar is visible over the image */
-    flex-wrap: nowrap; /* Prevent wrapping of nav items */
+    background-color: rgba(0, 0, 0, 0.25);
+    flex-wrap: nowrap;
 }
 
 #home-icon {
-    height: 160px; /* Set the logo height */
-    width: 155px; /* Set the logo width */
-    margin-right: 40px; /* Extra space between logo and first navigation item */
+    height: 160px;
+    width: 155px;
+    margin-right: 40px;
 }
 
 #nav-links {
@@ -52,18 +95,20 @@ html, body {
 }
 
 #nav-links h4 {
-    margin: 0 20px; /* Equal spacing between navigation items */
-    transition: background-color 0.5s ease; /* Transition effect for background color */
-    padding: 10px; /* Optional: Adds padding around the text */
+    margin: 0 20px;
+    transition: background-color 0.5s ease;
+    padding: 10px;
     font-size: 19px;
     display: inline;
 }
 
 #nav-links h4:hover {
-    background-color: rgba(255, 255, 255, 0.301); /* Background color on hover */
+    background-color: rgba(255, 255, 255, 0.301);
 }
 
 #page1 {
+    transition: opacity 1s ease-in;
+    
     height: 100vh;
     width: 100%;
     position: relative;
@@ -83,10 +128,10 @@ html, body {
 }
 
 #content-wrapper {
-    z-index: 1; /* Ensure content is above the image */
+    z-index: 1;
     text-align: center;
-    padding-right: 590px; /* Shift content to the left */
-    padding-top:70px;
+    padding-right: 590px;
+    padding-top: 70px;
 }
 
 .page-text {
@@ -98,32 +143,32 @@ html, body {
 }
 
 .large-text {
-    font-size: 55px; /* Increase this value to make the text larger */
+    font-size: 55px;
 }
 
 .changing-text {
     display: inline-block;
-    white-space: pre; /* Preserve spaces */
+    white-space: pre;
 }
 
 .welcome {
-    margin-left: 30px; /* Adjust margin left */
+    margin-left: 30px;
 }
 
 #description {
     margin-top: 20px;
     font-size: 1.2em;
-    color: #fff; /* Adjust the color as needed */
+    color: #fff;
     text-align: center;
     max-width: 600px;
-    margin-left: 30px; /* Adjust margin left */
+    margin-left: 30px;
     margin-right: auto;
 }
 
 #description p {
     margin: 0;
     line-height: 1.6;
-    font-weight: 500; /* Adjust font weight as needed */
+    font-weight: 500;
     letter-spacing: 1px;
 }
 
