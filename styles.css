@@ -7,13 +7,14 @@
 html, body {
     height: 100%;
     width: 100%;
-    cursor: none; 
+    cursor: none;
     overflow-x: hidden; /* Prevent horizontal scroll */
     margin: 0;
 }
+
 #cursor {
-    height: 36px;
-    width: 30px;
+    height: 25px;
+    width: 20px;
     position: fixed;
     z-index: 999; /* Ensure the cursor is above other content */
     pointer-events: none; /* Prevent cursor from interfering with mouse events */
@@ -21,6 +22,7 @@ html, body {
     background-size: cover; /* Ensure the image covers the cursor area */
     background-repeat: no-repeat; /* Prevent repeating the image */
 }
+
 #nav {
     height: 10vh;
     width: 100%;
@@ -32,8 +34,8 @@ html, body {
     position: absolute;
     top: 0;
     padding: 0 45px;
-    
-   background-color: rgba(0, 0, 0, 0.25); /*to Ensure the nav bar is visible over the image */
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.25); /* Ensure the nav bar is visible over the image */
     flex-wrap: nowrap; /* Prevent wrapping of nav items */
 }
 
@@ -51,11 +53,87 @@ html, body {
 
 #nav-links h4 {
     margin: 0 20px; /* Equal spacing between navigation items */
+    transition: background-color 0.5s ease; /* Transition effect for background color */
+    padding: 10px; /* Optional: Adds padding around the text */
+    font-size: 19px;
+    display: inline;
+}
+
+#nav-links h4:hover {
+    background-color: rgba(255, 255, 255, 0.301); /* Background color on hover */
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #homepage {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
+#content-wrapper {
+    z-index: 1; /* Ensure content is above the image */
+    text-align: center;
+    padding-right: 590px; /* Shift content to the left */
+    padding-top:70px;
+}
+
+.page-text {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.large-text {
+    font-size: 55px; /* Increase this value to make the text larger */
+}
+
+.changing-text {
+    display: inline-block;
+    white-space: pre; /* Preserve spaces */
+}
+
+.welcome {
+    margin-left: 30px; /* Adjust margin left */
+}
+
+#description {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #fff; /* Adjust the color as needed */
+    text-align: center;
+    max-width: 600px;
+    margin-left: 30px; /* Adjust margin left */
+    margin-right: auto;
+}
+
+#description p {
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 500; /* Adjust font weight as needed */
+    letter-spacing: 1px;
+}
+
+#quizpage {
+    font-size: 50px;
+    color: red;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.153);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
