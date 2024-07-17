@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Reset and global styles */
 * {
     margin: 0;
@@ -10,61 +8,30 @@
 html, body {
     height: 100%;
     width: 100%;
-    cursor: none;
+    cursor: none; /* Hide the default cursor */
     overflow: hidden;
     margin: 0;
 }
 
 #cursor {
-    height: 25px;
-    width: 20px;
+    height: 40px;
+    width: 30px;
     position: fixed;
     z-index: 999;
-    pointer-events: none;
-    background-image: url('cursor.png');
+    pointer-events: none; /* Prevent interaction with the cursor element itself */
+    background-image: url('cursor4.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#rocket-animation {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: black;
-    z-index: 1000;
-    transition: opacity 2s ease-out; /* Smooth fade-out */
+a {
+    text-decoration: none;
+    color: white;
 }
 
-#rocket {
-    height:400px;
-    width: 250px;
-    animation: launch 2s forwards;
-    transition: opacity 2s ease-out;
+a:hover {
+    cursor: none;
 }
-#rocket-animation.hide {
-    opacity: 0;
-    pointer-events: none; /* Prevent interaction with the hidden element */
-}
-
-@keyframes launch {
-    0% {
-        transform: translateY(100vh);
-    }
-    100% {
-        transform: translateY(-100vh);
-    }
-}
-
-/* Hide the rocket animation after it's done */
-.hide {
-    display: none;
-}
-
-/* Rest of your CSS for navigation, page content, etc. */
 
 #nav {
     height: 10vh;
@@ -94,21 +61,23 @@ html, body {
     justify-content: space-between;
 }
 
+#nav-links a {
+    display: block;
+    padding: 10px 20px; /* Adjust padding as needed */
+}
+
 #nav-links h4 {
-    margin: 0 20px;
-    transition: background-color 0.5s ease;
-    padding: 10px;
+    margin: 0;
     font-size: 19px;
     display: inline;
 }
 
-#nav-links h4:hover {
+#nav-links a:hover {
     background-color: rgba(255, 255, 255, 0.301);
 }
 
 #page1 {
     transition: opacity 1s ease-in;
-    
     height: 100vh;
     width: 100%;
     position: relative;
@@ -157,8 +126,8 @@ html, body {
 
 #description {
     margin-top: 20px;
-    font-size: 1.2em;
-    color: #fff;
+    font-size: 1.3em;
+    color: #ffffffdc;
     text-align: center;
     max-width: 600px;
     margin-left: 30px;
@@ -167,18 +136,185 @@ html, body {
 
 #description p {
     margin: 0;
-    line-height: 1.6;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-size: 0.8em; /* Adjust the font size as needed */
+    line-height: 1.4; /* Adjust the line height for vertical spacing */
+    letter-spacing: 0.6px; /* Adjust the letter spacing */
+    font-weight: normal;
 }
 
-#quizpage {
-    font-size: 50px;
-    color: red;
-    z-index: 99;
-    background-color: rgba(0, 0, 0, 0.153);
+#rocket-animation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: black;
+    z-index: 1000;
+    transition: opacity 2s ease-out; /* Smooth fade-out */
+}
+
+#rocket {
+    height: 450px;
+    width: 320px;
+    animation: launch 2.6s forwards;
+    transition: opacity 2s ease-in;
+}
+
+#rocket-animation.hide {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction with the hidden element */
+}
+
+/* Hide the rocket animation after it's done */
+.hide {
+    display: none;
+}
+
+@keyframes launch {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url('starspage2.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.content-container {
+  
+    background-color: rgba(239, 242, 248, 0.026);
+    display: flex;
+    gap: 30px; /* Space between the boxes */
+    padding: 20px;
+    height: 100%;
+    width: 100%; /* Adjust width as needed */
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Add this */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%; /* Add this */
+}
+
+#img-box {
+    width: 35%;
+    height: 70%; /* Add this */
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+#img-box img {
+    width: 100%;
+    height: 100%; /* Add this */
+    border-radius: 15px;
+    object-fit: cover; /* Add this to ensure the image covers the entire box */
+}
+
+#text-box {
+    background-color: rgba(255, 255, 255, 0.04);
+    width: 55%;
+    height: 70%; /* Add this */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#text-box p {
+    font-weight: bolder;
+    font-size: 3.3em;
+    margin-bottom: 20px;
+}
+.button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 25px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 35px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+  
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  

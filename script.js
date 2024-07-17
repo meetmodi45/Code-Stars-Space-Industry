@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", function () {
     // Rocket animation
     const rocketAnimation = document.getElementById('rocket-animation');
@@ -16,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             page1.style.opacity = '1'; // Fade in the homepage
         }, 2000); // Duration should match the CSS transition duration
     });
+
     // Text animation
     const changingText = document.querySelector(".changing-text");
     const originalText = "INDUSTRY";
@@ -42,11 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     setTimeout(backspace, 3700);
-});
 
-// Cursor movement
-var c = document.querySelector("#cursor");
-document.addEventListener("mousemove", function (dets) {
-    c.style.left = dets.x - 20 + "px";
-    c.style.top = dets.y - 20 + "px";
+    // Cursor movement
+    const cursor = document.querySelector("#cursor");
+    document.addEventListener("mousemove", function (event) {
+        cursor.style.left = event.clientX - 20 + "px";
+        cursor.style.top = event.clientY - 20 + "px";
+    });
+
+    // Change cursor on link hover
+    const links = document.querySelectorAll("a");
+    links.forEach((link) => {
+        link.addEventListener("mouseover", () => {
+            cursor.style.backgroundImage = "url('cursor5.png')";
+        });
+        link.addEventListener("mouseout", () => {
+            cursor.style.backgroundImage = "url('cursor4.png')";
+        });
+    });
 });
