@@ -191,6 +191,16 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url('starspage2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .content-container {
   
@@ -220,7 +230,7 @@ a:hover {
 #img-box {
     width: 35%;
     height: 70%; /* Add this */
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(255, 255, 255, 0.025);
 }
 
 #img-box img {
@@ -229,9 +239,26 @@ a:hover {
     border-radius: 15px;
     object-fit: cover; /* Add this to ensure the image covers the entire box */
 }
+#img-box1 {
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 70%; /* Add this */
+    background-color: rgba(255, 255, 255, 0.025);
+}
+
+#img-box1 img {
+    width: 80%;
+    height: 80%; /* Add this */
+    border-radius: 13%;
+    object-fit: cover; /* Add this to ensure the image covers the entire box */
+}
 
 #text-box {
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(255, 255, 255, 0.025);
     width: 55%;
     height: 70%; /* Add this */
     display: flex;
@@ -247,6 +274,28 @@ a:hover {
     font-size: 3.3em;
     margin-bottom: 20px;
 }
+#text-box1 {
+    background-color: rgba(255, 255, 255, 0.025);
+    width: 55%;
+    height: 70%; /* Add this */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+#calender{
+    color:rgb(4, 128, 211);
+}
+#quizspan{
+    color:rgb(4, 128, 211);
+}
+#text-box1 p {
+    font-weight: bolder;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
 .button {
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -258,7 +307,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: none;
     color: #ffff;
     gap: 10px;
     font-weight: bold;
