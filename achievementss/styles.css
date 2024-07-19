@@ -1,0 +1,271 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-image: url("stars.jpg"); */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+}
+
+
+.gallery-container {
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.gallery-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    /* Ensure text overlay stays within the item */
+}
+
+.gallery-item img {
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    z-index: 2;
+    font-size: 20px;
+    font-weight: 200;
+    top: 90px;
+    left: 50px;
+    color: rgb(224, 230, 224);
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #000 40%, transparent);
+    left: 3%;
+    top: 25%;
+    width: 800px;
+    max-width: 80%;
+    z-index: 1;
+}
+
+.text-overlay h1 {
+    text-transform: uppercase;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.more-info {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.arrow {
+    transform: translateY(-50%);
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 3;
+    /* Ensure arrows are above the overlay */
+}
+
+.arrow.left {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    border-color: #fff;
+    color: white;
+}
+
+.arrow.right {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: white;
+    border-color: #fff;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 3;
+    /* Ensure dots are above the overlay */
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+    background-color: blue;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.dot.active {
+    background-color: red;
+    width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 400px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#chat-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input,
+form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+.faaaq{
+    width: 100%;
+    background-image: url("pslv.jpeg");
+    display: flex;
+    flex-direction: row;
+}
+.faq-container {
+    max-width: 100%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.question {
+    cursor: pointer;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.question:hover {
+    background: #0056b3;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    margin-top: 5px;
+}
