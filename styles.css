@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 /* Reset and global styles */
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,11 +10,19 @@
 html, body {
     height: 100%;
     width: 100%;
-    cursor: none; /* Hide the default cursor */
-    overflow: hidden;
+    cursor: none;
     margin: 0;
+    overflow-x:hidden;
+    color: #eee;
 }
-
+body {
+    overflow-x: hidden;
+}
+#page1, #page2, #page3 {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
 #cursor {
     height: 40px;
     width: 30px;
@@ -33,37 +43,64 @@ a:hover {
     cursor: none;
 }
 
-#nav {
+
+#navbar {
+    
     height: 10vh;
     width: 100%;
     color: white;
     font-size: 20px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     font-family: 'Orbitron', sans-serif;
-    position: absolute;
+    position: fixed; /* Ensure position is fixed */
     top: 0;
     padding: 0 45px;
+    box-sizing: border-box;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.25);
     flex-wrap: nowrap;
+    transition: top 0.5s ease; /* Add transition for smooth hiding/showing */
 }
 
-#home-icon {
-    height: 160px;
-    width: 155px;
-    margin-right: 40px;
+ul{
+    margin: 0;
+    padding: 0;
+display: flex;
 }
-
+ul li{
+    list-style: none;
+}
+ul li a{
+    color:white;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+.brand{
+     font-size: 1.3em;
+     color:white;
+     font-weight: bold;
+     text-decoration: none;
+     transition: background-color 0.3s ease;
+     padding: 10px 30px;
+     border-radius: 20px;
+}
 #nav-links {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
+    border-radius: 10%;
 }
 
 #nav-links a {
     display: block;
     padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 6%;
 }
 
 #nav-links h4 {
@@ -72,13 +109,13 @@ a:hover {
     display: inline;
 }
 
-#nav-links a:hover {
+a:hover {
     background-color: rgba(255, 255, 255, 0.301);
 }
 
 #page1 {
     transition: opacity 1s ease-in;
-    height: 100vh;
+    height: 105vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -101,6 +138,7 @@ a:hover {
     text-align: center;
     padding-right: 590px;
     padding-top: 70px;
+
 }
 
 .page-text {
@@ -203,7 +241,6 @@ a:hover {
 }
 
 .content-container {
-  
     background-color: rgba(239, 242, 248, 0.026);
     display: flex;
     gap: 30px; /* Space between the boxes */
@@ -212,6 +249,8 @@ a:hover {
     width: 100%; /* Adjust width as needed */
     justify-content: center;
     align-items: center;
+    max-width: 1200px; /* adjust the max-width value as needed */
+    margin: 0 auto;
 }
 
 .box {
@@ -251,9 +290,9 @@ a:hover {
 }
 
 #img-box1 img {
-    width: 80%;
-    height: 80%; /* Add this */
-    border-radius: 13%;
+    width: 85%;
+    height: 85%; /* Add this */
+    border-radius: 10%;
     object-fit: cover; /* Add this to ensure the image covers the entire box */
 }
 
@@ -316,28 +355,28 @@ a:hover {
     overflow: hidden;
     font-size: 25px;
     font-family: 'Orbitron', sans-serif;
-  }
-  
-  .icon {
+}
+
+.icon {
     width: 50px;
     height: 35px;
     transition: all 0.3s ease-in-out;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     transform: scale(1.05);
     border-color: #fff9;
-  }
-  
-  .button:hover .icon {
+}
+
+.button:hover .icon {
     transform: translate(4px);
-  }
-  
-  .button:hover::before {
+}
+
+.button:hover::before {
     animation: shine 1.5s ease-out infinite;
-  }
-  
-  .button::before {
+}
+
+.button::before {
     content: "";
     position: absolute;
     width: 100px;
@@ -351,19 +390,231 @@ a:hover {
     top: 0;
     left: -100px;
     opacity: 0.6;
-  }
-  
-  @keyframes shine {
+}
+
+@keyframes shine {
     0% {
-      left: -100px;
+        left: -100px;
     }
-  
+
     60% {
-      left: 100%;
+        left: 100%;
     }
-  
+
     to {
-      left: 100%;
+        left: 100%;
     }
-  }
-  
+}
+
+#nav.hide {
+    transform: translateY(-100%);
+}
+header {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    font-family: Poppins;
+}
+
+header .logo {
+    font-weight: bold;
+}
+
+header .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+/* CSS Slider */
+.slider {
+    font-family: Poppins;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    margin-top: -50px;
+    position: relative;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+    font-family: Poppins;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: Poppins;
+}
+
+.slider .list .item::after {
+    font-family: Poppins;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 23%, transparent);
+}
+
+.slider .list .item .content {
+    font-family: Poppins;
+    position: absolute;
+    left: 8%;
+    top: 20%;
+    width: 550px;
+    max-width: 80%;
+    z-index: 1;
+}
+
+.slider .list .item .content p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.slider .list .item .content p:nth-child(3) {
+    word-spacing: 4px;
+    font-size: 17px;
+}
+
+.slider .list .item .content h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out forwards;
+}
+
+.slider .list .item.active h2 {
+    animation-delay: 1s;
+}
+
+.slider .list .item.active p:nth-child(3) {
+    animation-duration: 1.3s;
+}
+
+.arrows {
+    position: absolute;
+    top: 95%;
+    right: 40%;
+    z-index: 100;
+    gap: 20px;
+    max-width: 30%;
+    display: flex;
+}
+
+.arrows button {
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: x-large;
+    color: #eee;
+    transition: .5s;
+}
+
+.arrows button:hover {
+    background-color: #eee;
+    color: black;
+    cursor:none;
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 25%;
+    z-index: 11;
+    display: flex;
+    gap: 20px; /* increased space between thumbnails */
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: visible; /* allows enlarged thumbnails to be visible */
+    justify-content: center;
+    align-items: center; /* center thumbnails vertically */
+}
+
+.thumbnail::-webkit-scrollbar {
+    width: 0;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    filter: brightness(.5);
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    border-radius: 10px; /* ensures curved edges */
+}
+
+.thumbnail .item.active {
+    filter: brightness(1.5);
+    transform: scale(1.2); /* ensures scaling */
+    transform-origin: center; /* ensures it scales up and down */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* adds more shadow */
+    z-index: 20; /* ensures the active thumbnail is on top */
+    position: relative; /* ensures the active thumbnail is positioned correctly */
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+@media screen and (max-width: 678px) {
+    .thumbnail {
+        justify-content: start;
+    }
+    .slider .list .item .content h2 {
+        font-size: 60px;
+    }
+    .arrows {
+        top: 10%;
+    }
+}
