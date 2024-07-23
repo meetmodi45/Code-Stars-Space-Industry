@@ -657,7 +657,6 @@ header .menu {
     margin-bottom: 10px;
     color: #fff;
 }
-
 .social-icons {
     display: flex;
     justify-content: center;
@@ -679,29 +678,37 @@ header .menu {
     max-width: 600px;
     margin: 0 auto;
     background: transparent;
+    height: 90%;
+    width: 50%;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(165, 130, 130, 0.388);
 }
 
 .form-container h1 {
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 10%;
+    margin-left: 5%;
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: 200%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
     color: #fff;
 }
 
 .form-group {
+    margin-top: 10%;
     margin-bottom: 15px;
+    font-size: 100%;
     text-align: left;
     display: flex;
     flex-direction: row;
 }
 
 .form-group label {
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
-    width: 30%;
+    width: 40%;
     max-width: 100%;
     padding: 10px;
     color: #fff;
@@ -719,7 +726,7 @@ header .menu {
     padding: 10px;
     font-size: 17px;
     font-weight: bold;
-    color: #000;
+    color: #f3f2f2;
     border-radius: 4px;
     background: transparent;
 }
@@ -731,7 +738,8 @@ header .menu {
 
 form input:hover,
 form textarea:hover {
-    background: #b2c0cf;
+    background: #72b0f285;
+    cursor:none;
 }
 
 
@@ -791,7 +799,8 @@ form textarea:hover {
     }
 }
 #button2{
-    margin-left: 40%;
+    margin-top: 15%;
+    margin-left: 32%;
 }
 #button2:focus {
     outline: 0;
