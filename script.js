@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -128,3 +129,13 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     });
 });
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.nav-links').classList.toggle('active');
+  });
+  
+  // Add this code to toggle the navbar links
+  document.querySelectorAll('.nav-links li').forEach((link) => {
+    link.classList.toggle('active');
+  });

@@ -11,7 +11,6 @@ html, body {
     width: 100%;
     cursor: none;
     margin: 0;
-    overflow-x:hidden;
     color: #eee;
     scroll-behavior: smooth;
 }
@@ -21,7 +20,6 @@ body {
 #page1, #page2, #page3 {
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
 }
 #cursor {
     height: 40px;
@@ -45,24 +43,23 @@ a:hover {
 
 
 #navbar {
-    
     height: 10vh;
-    width: 100%;
+    width: 100vw;
     color: white;
     font-size: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: 'Orbitron', sans-serif;
-    position: fixed; /* Ensure position is fixed */
+    position: fixed;
     top: 0;
     padding: 0 45px;
     box-sizing: border-box;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.25);
     flex-wrap: nowrap;
-    transition: top 0.5s ease; /* Add transition for smooth hiding/showing */
-}
+    transition: top 0.5s ease;
+  }
 
 ul{
     margin: 0;
@@ -96,12 +93,13 @@ ul li a{
 
 #page1 {
     transition: opacity 1s ease-in;
-    height: 105vh;
+    height: 106vh;
     width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(to top, #000000 1%, transparent);
 }
 
 #homepage {
@@ -209,6 +207,7 @@ ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 #page3 {
     height: 100vh;
@@ -435,6 +434,9 @@ header .menu {
     opacity: 0;
     transition: .5s;
     font-family: Poppins;
+}
+.slider, .thumbnail {
+    overflow: hidden; /* Prevent elements from extending outside their container */
 }
 
 .slider .list .item img {
@@ -684,7 +686,7 @@ header .menu {
     width: 50%;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(233, 224, 224, 0.999);
+    border: 5px solid #fff;
 }
 
 .form-container h1 {
@@ -919,4 +921,161 @@ form textarea:hover {
         left: 2px;
         background-color: #f44336;
     }
-}
+} 
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .brand {
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 10px 30px;
+    border-radius: 20px;
+  }
+  
+  #navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.301);
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .brand {
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 10px 30px;
+    border-radius: 20px;
+  }
+  
+  #navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.301);
+  }
+  
+  /* Add media queries for responsiveness */
+  
+  /* For tablet screens (768px to 1024px) */
+  @media screen and (max-width: 1024px) {
+    #navbar {
+      padding: 0 20px;
+    }
+    ul li a {
+      padding: 10px 20px;
+    }
+   .brand {
+      padding: 10px 20px;
+    }
+  }
+  
+  /* For mobile screens (480px to 768px) */
+  @media screen and (max-width: 768px) {
+    #navbar {
+      padding: 0 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    ul li a {
+      padding: 10px 10px;
+    }
+   .brand {
+      padding: 10px 10px;
+    }
+    /* Hide navbar on mobile devices */
+    #navbar ul {
+      display: none;
+    }
+    /* Add hamburger menu icon */
+    #navbar.hamburger {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+    #navbar.hamburger span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin-bottom: 5px;
+    }
+  }
+  
+  /* For small mobile screens (less than 480px) */
+  @media screen and (max-width: 480px) {
+    #navbar {
+      padding: 0 5px;
+    }
+    ul li a {
+      padding: 5px 5px;
+    }
+   .brand {
+      padding: 5px 5px;
+    }
+    /* Hide navbar on small mobile devices */
+    #navbar ul {
+      display: none;
+    }
+    /* Add hamburger menu icon */
+    #navbar.hamburger {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+    #navbar.hamburger span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin-bottom: 5px;
+    }
+  }
+  
+  /* Show navbar on hamburger menu click */
+  #navbar.hamburger:hover + ul {
+    display: block;
+  }
