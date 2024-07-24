@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     // Rocket animation
     const rocketAnimation = document.getElementById('rocket-animation');
     const rocket = document.getElementById('rocket');

@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div id="rocket-animation">
@@ -14,12 +15,12 @@
     </div>
     <div id="cursor"></div>
     <nav id="navbar">
-        <a href="#" class="brand">CodeStars</a>
+        <a href="#page1" class="brand">CodeStars</a>
         <ul>
-            <li><a href="#">ACHIEVEMENTS</a></li>
-            <li><a href="#">STARGAZING-CALENDER</a></li>
-            <li><a href="#">QUIZ</a></li>
-            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#slider">ACHIEVEMENTS</a></li>
+            <li><a href="#page3">STARGAZING-CALENDER</a></li>
+            <li><a href="#page2">QUIZ</a></li>
+            <li><a href="#page4">ABOUT US</a></li>
         </ul>
     </nav>
     <div id="page1">
@@ -36,7 +37,7 @@
         </div>
     </div>
     <hr>
-    <div class="slider">
+    <div id="slider" class="slider">
         <div class="list">
             <div class="item" data-index="2">
                 <img src="mom5k.jpg">
@@ -192,7 +193,7 @@
         </div>
     </div>
     <hr>
-    <div class="page4">
+    <div id="page4" class="page4">
         <div class="left-side">
             <div class="box2">
                 <div class="circle-photo">
@@ -202,7 +203,7 @@
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/meetmodi45" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
             <div class="box2">
@@ -291,5 +292,10 @@
         });
     </script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
