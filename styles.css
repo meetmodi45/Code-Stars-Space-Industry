@@ -922,7 +922,7 @@ form textarea:hover {
         background-color: #f44336;
     }
 } 
-  ul {
+ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -956,39 +956,7 @@ form textarea:hover {
     background-color: rgba(255, 255, 255, 0.301);
   }
   
-  ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
   
-  ul li {
-    list-style: none;
-  }
-  
-  ul li a {
-    color: white;
-    font-size: 1.2em;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .brand {
-    font-size: 1.3em;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    padding: 10px 30px;
-    border-radius: 20px;
-  }
-  
-  #navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.301);
-  }
   
   /* Add media queries for responsiveness */
   
