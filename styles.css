@@ -934,7 +934,7 @@ form textarea:hover {
   
   ul li a {
     color: white;
-    font-size: 0.9em;
+    font-size: 1.0em;
     text-decoration: none;
     font-weight: bolder;
     padding: 10px 10px;
@@ -994,14 +994,14 @@ form textarea:hover {
       display: none;
     }
     /* Add hamburger menu icon */
-    #navbar.hamburger {
+    .hamburger {
       display: block;
       position: absolute;
       top: 10px;
       right: 10px;
       cursor: pointer;
     }
-    #navbar.hamburger span {
+    .hamburger span {
       display: block;
       width: 30px;
       height: 3px;
@@ -1026,14 +1026,14 @@ form textarea:hover {
       display: none;
     }
     /* Add hamburger menu icon */
-    #navbar.hamburger {
+    .hamburger {
       display: block;
       position: absolute;
       top: 10px;
       right: 10px;
       cursor: pointer;
     }
-    #navbar.hamburger span {
+    .hamburger span {
       display: block;
       width: 30px;
       height: 3px;
@@ -1043,6 +1043,6 @@ form textarea:hover {
   }
   
   /* Show navbar on hamburger menu click */
-  #navbar.hamburger:hover + ul {
+  .hamburger:hover + ul {
     display: block;
   }
