@@ -1,12 +1,14 @@
+
+
 const questions = [
     {
-        question: "Which planet is known as the Red Planet?",
+        question: "How many planets are there in our Solar System?",
         answers: [
             
-            {text: "A) "+" "+" "+" "+"Venus", correct: false},
-            {text: "B)  Jupiter", correct: false},
-            {text: "C)  Mars", correct: true},
-            {text: "D)  Mercury", correct: false},
+            {text: "A) "+" "+" "+" "+"Nine", correct: false},
+            {text: "B)  Seven", correct: false},
+            {text: "C)  Eight", correct: true},
+            {text: "D)  Six", correct: false},
 
          ]
     },
@@ -56,6 +58,7 @@ let questionindex = 0;
 let score = 0;
 
 function startquiz(){
+   
     questionindex  = 0;
     score = 0;
     nextbtn.innerHTML = "Next";
@@ -72,7 +75,7 @@ function showquestion(){
     
     let current = questions[questionindex];
     let questionno = questionindex + 1;
-    questionelement.innerHTML = questionno +") " + current.question;
+    questionelement.innerHTML = questionno +":- " + current.question;
 
     current.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -91,6 +94,7 @@ function showquestion(){
  function resetstate(){
    
     nextbtn.style.display = "none";
+    document.getElementById("button").style.display = "none";
     document.getElementById("zero").style.display = "none";
     document.getElementById("one").style.display = "none";
     document.getElementById("four").style.display = "none";
@@ -146,9 +150,10 @@ setTimeout(function() {
 }
 function showscore(){
     resetstate();
-    questionelement.innerHTML = "<p style='text-align: center'>Your score is " +score+ " out of "+questions.length
+    questionelement.innerHTML = "Your score is " +score+ " out of "+questions.length
     nextbtn.innerHTML = "play again";
     nextbtn.style.display = "block";
+    document.getElementById("button").style.display = "block";
     if(score === 0){
         document.getElementById("zero").style.display = "block";
     }
