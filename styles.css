@@ -41,10 +41,10 @@ a:hover {
     cursor: none;
 }
 
-
+/* navbar css */
 #navbar {
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     color: white;
     font-size: 20px;
     display: flex;
@@ -92,6 +92,7 @@ ul li a{
     background-color: rgba(255, 255, 255, 0.301);
 }
 
+/* page 1 css */
 #page1 {
     transition: opacity 1s ease-in;
     height: 106vh;
@@ -103,6 +104,7 @@ ul li a{
     background-image: linear-gradient(to top, #000000 1%, transparent);
 }
 
+/* page 1 background */
 #homepage {
     height: 100%;
     width: 100%;
@@ -160,6 +162,7 @@ ul li a{
     font-weight: normal;
 }
 
+/* rocket intro */
 #rocket-animation {
     position: fixed;
     bottom: 0;
@@ -199,6 +202,7 @@ ul li a{
     }
 }
 
+/* page 2 & 3 css */
 #page2 {
     height: 100vh;
     width: 100%;
@@ -390,7 +394,7 @@ ul li a{
 #nav.hide {
     transform: translateY(-100%);
 }
-header {
+/* header {
     width: 100%;
     max-width: 90%;
     margin: auto;
@@ -416,7 +420,7 @@ header .menu {
     justify-content: center;
     gap: 20px;
     font-weight: 500;
-}
+} */
 
 /* CSS Slider */
 .slider {
@@ -604,7 +608,7 @@ header .menu {
         top: 10%;
     }
 }
-/* CSS styles */
+/* page 4 CSS styles */
 .page4 {
     display: flex;
     height: 100%;
