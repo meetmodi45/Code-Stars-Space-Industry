@@ -17,7 +17,7 @@ html, body{
 body {
     overflow-x: hidden;
 }
-#page1, #page2, #page3 {
+#page1, #page2{
     height: 100vh;
     width: 100vw;
 }
@@ -46,7 +46,7 @@ a:hover {
     height: 10vh;
     width: 100%;
     color: white;
-    font-size: 20px;
+    font-size: calc(0.5rem + 0.8vw);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -59,17 +59,21 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.25);
     flex-wrap: nowrap;
     transition: top 0.5s ease;
+    gap: 15%;
   }
 
-ul{
-    margin: 0;
-    padding: 0;
+  .nav-links{
     display: flex;
-}
-ul li{
     list-style: none;
-}
-ul li a{
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav-links a{
+    /* font-size:calc */
+  }
+
+.navlinks a{
     color:white;
     font-size: 0.85rem;
     text-decoration: none;
@@ -79,6 +83,7 @@ ul li a{
     margin: 10px;
     transition: background-color 0.3s ease;
 }
+
 .brand{
      font-size: 2.0rem;
      color:white;
@@ -108,11 +113,13 @@ ul li a{
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
-        position: absolute;
+        position: fixed;
         top: 60px;
-        left: 0;
+        right: 0%;
         background-color: #333;
+        max-width: 350px;
+        gap: 2rem;
+        padding-block: 2rem;
     }
 
     .nav-links li {
@@ -126,6 +133,7 @@ ul li a{
 
     .nav-links.active {
         display: flex;
+        width: 100%;
     }
 }
 /* page 1 css */
@@ -136,7 +144,6 @@ ul li a{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-image: linear-gradient(to top, #000000 1%, transparent);
 }
 
@@ -154,7 +161,6 @@ ul li a{
 #content-wrapper {
     z-index: 1;
     text-align: center;
-    padding-right: 590px;
     padding-top: 70px;
 
 }
@@ -167,8 +173,16 @@ ul li a{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
+.text-container{
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    flex-direction: column;
+    padding-left: 6rem;
+}
+
 .large-text {
-    font-size: 55px;
+    font-size: calc(2rem + 1.5vw);
 }
 
 .changing-text {
@@ -186,8 +200,7 @@ ul li a{
     color: #ffffffdc;
     text-align: center;
     max-width: 600px;
-    margin-left: 30px;
-    margin-right: auto;
+    padding-inline: 1rem;
 }
 
 #description p {
@@ -251,7 +264,6 @@ ul li a{
 
 }
 #page3 {
-    height: 100vh;
     width: 100%;
     background-image: url('starspage2.jpg');
     background-size: cover;
@@ -259,6 +271,7 @@ ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-block: 10rem;
 }
 
 .content-container {
@@ -272,6 +285,7 @@ ul li a{
     align-items: center;
     max-width: 1200px; /* adjust the max-width value as needed */
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .box {
@@ -311,8 +325,8 @@ ul li a{
 }
 
 #img-box1 img {
-    width: 85%;
-    height: 85%; /* Add this */
+    width: 25rem;
+    height: 25rem; /* Add this */
     border-radius: 10%;
     object-fit: cover; /* Add this to ensure the image covers the entire box */
 }
@@ -961,5 +975,18 @@ form textarea:hover {
     95% {
         left: 2px;
         background-color: #f44336;
+    }
+}
+
+@media(max-width: 850px){
+    .text-container{
+        padding-left: 0rem;
+    }
+}
+
+
+@media(max-width:951px){
+    #navbar{
+        gap: 2rem;
     }
 }

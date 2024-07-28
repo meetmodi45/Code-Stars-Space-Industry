@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+
 <body>
     <div id="rocket-animation">
         <img id="rocket" src="lmv1.png" alt="Rocket">
@@ -17,32 +19,35 @@
     <nav id="navbar">
         <a href="#page1" class="brand">CodeStars</a>
         <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <ul class="nav-links">
-          <li><a href="#slider">ACHIEVEMENTS</a></li>
-          <li><a href="#page3">STARGAZING-CALENDER</a></li>
-          <li><a href="#page2">QUIZ</a></li>
-          <li><a href="#page4">ABOUT US</a></li>
+            <li><a href="#slider">ACHIEVEMENTS</a></li>
+            <li><a href="#page3">STARGAZING-CALENDER</a></li>
+            <li><a href="#page2">QUIZ</a></li>
+            <li><a href="#page4">ABOUT US</a></li>
         </ul>
-      </nav>
+    </nav>
     <div id="page1">
         <img id="homepage" src="spacesuit3.jpg" alt="space">
         <div id="content-wrapper">
-            <div class="page-text large-text" id="welcome">WELCOME TO</div>
-            <div class="page-text large-text">
-                <span class="static-text">SPACE</span>
-                <span class="changing-text">INDUSTRY</span>
-            </div>
-            <div class="page-text" id="description">
-                <p>Discover the latest in space exploration, track real-time missions, and engage with interactive content. Join us on a journey beyond the stars.</p>
+            <div class="text-container">
+                <div class="page-text large-text" id="welcome">WELCOME TO</div>
+                <div class="page-text large-text">
+                    <span class="static-text">SPACE</span>
+                    <span class="changing-text">INDUSTRY</span>
+                </div>
+                <div class="page-text" id="description">
+                    <p>Discover the latest in space exploration, track real-time missions, and engage with interactive
+                        content. Join us on a journey beyond the stars.</p>
+                </div>
             </div>
         </div>
     </div>
     <hr>
-    <div id="slider" class="slider" data-aos="fade">
+    <div id="slider" class="slider">
         <div class="list">
             <div class="item" data-index="2">
                 <img src="mom5k.jpg">
@@ -175,7 +180,7 @@
         </div>
     </div>
     <hr>
-    <div id="page2" data-aos="fade">
+    <!-- <div id="page2" data-aos="fade">
         <div class="content-container" data-aos="fade-right" data-aos-duration="1200">
             <div class="box" id="img-box">
                 <img id="imgquiz" src="quizphoto.png" alt="Quiz Image">
@@ -269,8 +274,8 @@
                 </form>
             </div>
         </div>
-    </div>
-    <script>
+    </div> -->
+    <!-- <script>
         document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             var name = document.getElementById('name').value.trim();
@@ -283,27 +288,28 @@
 
             if (name === "" || email === "" || message === "") {
                 button.classList.add('animate', 'error');
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
                     alert("Please fill out all fields.");
                 }, 3000);  // delay to match the error animation duration
             } else {
                 button.classList.add('animate', 'success');
-                setTimeout(function(){
+                setTimeout(function () {
                     location.reload();
                     alert("Thank You for contacting us!");
                 }, 3000);  // delay to allow success animation to complete
             }
         });
-    </script>
+    </script> -->
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        offset:100,
-        duration:400,
-      });
+        AOS.init({
+            offset: 100,
+            duration: 400,
+        });
     </script>
 </body>
+
 </html>
