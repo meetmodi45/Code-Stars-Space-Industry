@@ -130,12 +130,17 @@ thumbnails.forEach((thumbnail, index) => {
     });
 });
 
-document.querySelector('.hamburger').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.querySelector('.nav-links').classList.toggle('active');
-  });
+// document.querySelector('.hamburger').addEventListener('click', function() {
+//     this.classList.toggle('active');
+//     document.querySelector('.nav-links').classList.toggle('active');
+//   });
   
-  // Add this code to toggle the navbar links
-  document.querySelectorAll('.nav-links li').forEach((link) => {
-    link.classList.toggle('active');
-  });
+//   // Add this code to toggle the navbar links
+//   document.querySelectorAll('.nav-links li').forEach((link) => {
+//     link.classList.toggle('active');
+//   });
+
+  document.querySelector('.hamburger').addEventListener('click', function() {
+    var navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+});
