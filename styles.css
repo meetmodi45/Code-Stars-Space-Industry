@@ -17,7 +17,7 @@ html, body{
 body {
     overflow-x: hidden;
 }
-#page1, #page2{
+#page1{
     height: 100vh;
     width: 100vw;
 }
@@ -56,12 +56,20 @@ a:hover {
     padding: 0 1%;
     box-sizing: border-box;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.432);
     flex-wrap: nowrap;
     transition: top 0.5s ease;
     gap: 15%;
   }
 
+  /* navbar animation */
+  #navbar {
+    transition: height 0.2s ease-in-out; /* optional transition */
+  }
+  
+  #navbar:hover {
+    height: 12vh; /* new height on hover */
+  }
   .nav-links{
     display: flex;
     list-style: none;
@@ -69,12 +77,8 @@ a:hover {
     width: 100%;
   }
 
-  .nav-links a{
-    /* font-size:calc */
-  }
-
 .navlinks a{
-    color:white;
+    color: white;
     font-size: 0.85rem;
     text-decoration: none;
     font-weight: bolder;
@@ -93,8 +97,17 @@ a:hover {
      padding: 10px 20px;
      border-radius: 20px;
 }
-#navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.301);
+
+/*next two are for hover background  */
+/* #navbar a:hover {
+     /* background-color: rgba(255, 255, 255, 0.301); 
+     border-radius: 20px;
+} */
+
+li:hover{
+    border-radius: 20px;
+    height: 10vh;
+    background-color: #ffffff73;
 }
 
 .hamburger {
@@ -135,11 +148,15 @@ a:hover {
         display: flex;
         width: 100%;
     }
+
+    .nav-links li:hover{
+        display: inline-block;
+    }
 }
 /* page 1 css */
 #page1 {
     transition: opacity 1s ease-in;
-    height: 106vh;
+    height: 107vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -253,7 +270,6 @@ a:hover {
 
 /* page 2 & 3 css */
 #page2 {
-    height: 100vh;
     width: 100%;
     background-image: url('starspage2.jpg');
     background-size: cover;
@@ -261,6 +277,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-block: 12rem;
 
 }
 #page3 {
@@ -271,7 +288,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-block: 10rem;
+    padding-block: 12rem;
 }
 
 .content-container {
@@ -290,6 +307,7 @@ a:hover {
 
 .box {
     margin-top: 10px;
+    font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.682);
     border-radius: 15px;
     padding: 20px;
@@ -301,18 +319,19 @@ a:hover {
     height: 100%; /* Add this */
 }
 
-#img-box {
+/* next two not needed */
+/* #img-box {
     width: 40%;
-    height: 70%; /* Add this */
+    height: 70%; /* Add this 
     background-color: rgba(255, 255, 255, 0.04);
 }
 
 #img-box img {
-    width: 100%;
-    height: 100%; /* Add this */
+    width: 20rem;
+    height: 20rem; /* Add this 
     border-radius: 15px;
-    object-fit: cover; /* Add this to ensure the image covers the entire box */
-}
+    object-fit: cover; /* Add this to ensure the image covers the entire box 
+} */
 #img-box1 {
     margin-top: 10px;
     border-radius: 10px;
@@ -325,16 +344,17 @@ a:hover {
 }
 
 #img-box1 img {
-    width: 25rem;
-    height: 25rem; /* Add this */
+    width: 20rem;
+    height: 20rem; /* Add this */
     border-radius: 10%;
     object-fit: cover; /* Add this to ensure the image covers the entire box */
 }
 
-#text-box {
+/* this two also */
+/* #text-box {
     background-color: rgba(255, 255, 255, 0.04);
     width: 55%;
-    height: 70%; /* Add this */
+    height: 70%; /* Add this
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -345,9 +365,9 @@ a:hover {
 
 #text-box p {
     font-weight: bolder;
-    font-size: 3.3em;
+    font-size: 3em;
     margin-bottom: 20px;
-}
+} */
 #text-box1 {
     background-color: rgba(255, 255, 255, 0.04);
     width: 55%;
@@ -367,7 +387,7 @@ a:hover {
 }
 #text-box1 p {
     font-weight: bolder;
-    font-size: 3em;
+    font-size: 2.8em;
     margin-bottom: 20px;
 }
 .button1 {
@@ -441,35 +461,9 @@ a:hover {
     }
 }
 
+/* for hide on scroll */
 /* #nav.hide {
     transform: translateY(-100%);
-} */
-/* header {
-    width: 100%;
-    max-width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 50px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-    font-family: Poppins;
-}
-
-header .logo {
-    font-weight: bold;
-}
-
-header .menu {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-weight: 500;
 } */
 
 /* CSS Slider */
