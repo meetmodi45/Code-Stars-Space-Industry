@@ -27,7 +27,7 @@ body {
     position: fixed;
     z-index: 999;
     pointer-events: none; /* Prevent interaction with the cursor element itself */
-    background-image: url('cursor4.png');
+    background-image: url('image/cursor4.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -270,7 +270,7 @@ li:hover{
 /* page 2 & 3 css */
 #page2 {
     width: 100%;
-    background-image: url('starspage2.jpg');
+    background-image: url('image/starspage2.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -281,7 +281,7 @@ li:hover{
 }
 #page3 {
     width: 100%;
-    background-image: url('starspage2.jpg');
+    background-image: url('image/starspage2.jpg');
     background-size: cover;
     background-position: center;
     display: flex;

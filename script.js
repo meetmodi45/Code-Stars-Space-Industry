@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll("a");
     links.forEach((link) => {
         link.addEventListener("mouseover", () => {
-            cursor.style.backgroundImage = "url('cursor5.png')";
+            cursor.style.backgroundImage = "url('image/cursor5.png')";
         });
         link.addEventListener("mouseout", () => {
-            cursor.style.backgroundImage = "url('cursor4.png')";
+            cursor.style.backgroundImage = "url('image/cursor4.png')";
         });
     });
 
