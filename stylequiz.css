@@ -331,7 +331,9 @@ transition: 0.4s;
 transform: translateX(-56px);
 }
 
-
+.centered {
+  text-align: center;
+}
 
 
 @keyframes sh0 {
@@ -400,7 +402,7 @@ background-color: rgba(95, 103, 110, 0.482);
 width: 80%;
 max-width: 600px;
 border-radius: 10px;
-margin: 100px auto 0;
+margin: 150px auto 0;
 padding: 20px;
 
 }
