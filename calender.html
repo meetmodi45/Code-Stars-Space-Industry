@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Stargazing-Calender 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylecalender.css">
+</head>
+
+<body style="overflow-x: hidden;">
+    <!-- Background Video -->
+    <video id="background-video" autoplay muted loop>
+        <source src="images/intro.webm" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay Content -->
+    <div class="overlay">
+        <header>
+            <nav id="navbar">
+                <a href="#" class="brand">CodeStars</a>
+                <ul>
+                    <li><a href="#">ACHIEVEMENTS</a></li>
+                    <li><a href="#">STARGAZING-CALENDER</a></li>
+                    <li><a href="#">QUIZ</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="events-grid">
+                <div class="event-box" style="background-image: url('images/quadrantid.jpg');">
+                    <div class="event-info">
+                        <h3>Quadrantids Meteor Shower</h3>
+                        <p>03/01</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Quadrantids is an above average shower, with up to 40 meteors per hour at its peak. It is
+                            thought to be produced by dust grains left behind by an extinct comet known as 2003 EH1.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/fullmoon.jpg');">
+                    <div class="event-info">
+                        <h3>Full Moon (Wolf Moon)</h3>
+                        <p>25/01</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Full Moon of January is traditionally called the Wolf Moon. It will be fully illuminated
+                            and visible throughout the night.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/newmoon.jpg');">
+                    <div class="event-info">
+                        <h3>New Moon</h3>
+                        <p>09/02</p>
+                    </div>
+                    <div class="event-description">
+                        <p>During a New Moon, the moon is not visible from Earth because it is positioned between the
+                            Earth and the Sun, with the Sun illuminating the side of the moon facing away from us.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/snowmoon.webp');">
+                    <div class="event-info">
+                        <h3>Full Moon (Snow Moon)</h3>
+                        <p>24/02</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Full Moon of February is known as the Snow Moon. It will be fully illuminated and visible
+                            throughout the night.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/venus.png');">
+                    <div class="event-info">
+                        <h3>Venus at Greatest Eastern Elongation</h3>
+                        <p>01/03</p>
+                    </div>
+                    <div class="event-description">
+                        <p>Venus reaches its maximum separation from the Sun in the evening sky. It will be the
+                            brightest object in the sky after the Sun and the Moon, making it an ideal time to observe
+                            the planet.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/wormmoon.avif');">
+                    <div class="event-info">
+                        <h3>Full Moon (Worm Moon)</h3>
+                        <p>25/03</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Full Moon of March is traditionally called the Worm Moon, named after the earthworms that
+                            emerge from the thawing ground as winter ends. It will be fully illuminated and visible
+                            throughout the night.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/lyrid.jpg');">
+                    <div class="event-info">
+                        <h3>Lyrids Meteor Shower</h3>
+                        <p>22/04</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Lyrids is an average shower, usually producing about 20 meteors per hour at its peak. It
+                            is produced by dust particles left behind by comet C/1861 G1 Thatcher.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/pinkmoon.webp');">
+                    <div class="event-info">
+                        <h3>Full Moon (Pink Moon)</h3>
+                        <p>23/04</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Full Moon of April is known as the Pink Moon, named after the pink flowers (phlox) that
+                            bloom in early spring. It will be fully illuminated and visible throughout the night.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/aquariid.jpg');">
+                    <div class="event-info">
+                        <h3>Eta Aquarids Meteor Shower</h3>
+                        <p>06/05</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Eta Aquarids is an above average shower, capable of producing up to 60 meteors per hour
+                            at its peak. Most of the activity is seen in the Southern Hemisphere.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/flowermoon.jpg');">
+                    <div class="event-info">
+                        <h3>Full Moon (Flower Moon)</h3>
+                        <p>23/05</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Full Moon of May is traditionally called the Flower Moon, as it coincides with the
+                            blooming of flowers in the northern hemisphere. It will be fully illuminated and visible
+                            throughout the night.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/newmoon.jpg');">
+                    <div class="event-info">
+                        <h3>New Moon</h3>
+                        <p>08/06</p>
+                    </div>
+                    <div class="event-description">
+                        <p>During a New Moon, the moon is not visible from Earth because it is positioned between the
+                            Earth and the Sun, with the Sun illuminating the side of the moon facing away from us.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="event-box" style="background-image: url('images/strawberrymoon.webp');">
+                    <div class="event-info">
+                        <h3>Full Moon (Strawberry Moon)</h3>
+                        <p>21/06</p>
+                    </div>
+                    <div class="event-description">
+                        <p>The Full Moon of June is known as the Strawberry Moon, named after the strawberries that
+                            ripen during this month's harvest. It will be fully illuminated and visible throughout the
+                            night.</p>
+                        <button class="close-btn">Close</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Space Ventures. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="scriptcalender.js"></script>
+</body>
+
+</html>
