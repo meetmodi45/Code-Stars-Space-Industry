@@ -49,22 +49,31 @@ a:hover {
     height: 10vh;
     width: 100%;
     color: white;
-    font-size: 20px;
+    font-size: calc(0.5rem + 0.8vw);
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: 'Orbitron', sans-serif;
-    position: relative; /* Ensure position is fixed */
+    position: fixed; /* Ensure position is fixed */
     top: 0;
-    padding: 0 45px;
+    padding: 0 1%;
     box-sizing: border-box;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.432);
     flex-wrap: nowrap;
-    transition: top 0.5s ease; /* Add transition for smooth hiding/showing */
+    transition: top 0.5s ease;
+    gap: 15%;
+}
+/* navbar animation */
+#navbar {
+  transition: height 0.2s ease-in-out; /* optional transition */
 }
 
-ul{
+#navbar:hover {
+  height: 12vh; /* new height on hover */
+}
+
+/* ul{
     margin: 0;
     padding: 0;
 display: flex;
@@ -80,8 +89,8 @@ ul li a{
     padding: 10px 30px;
     border-radius: 20px;
     transition: background-color 0.3s ease;
-}
-.brand{
+} */
+/* .brand{
      font-size: 1.3em;
      color:white;
      font-weight: bold;
@@ -89,8 +98,36 @@ ul li a{
      transition: background-color 0.3s ease;
      padding: 10px 30px;
      border-radius: 20px;
+} */
+
+.nav-links{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 100%;
 }
-#nav-links {
+
+.navlinks a{
+  color: white;
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 10px 10px;
+  border-radius: 20px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.brand{
+   font-size: 2.0rem;
+   color:white;
+   font-weight: bold; 
+   text-decoration: none;
+   transition: background-color 0.3s ease;
+   padding: 10px 20px;
+   border-radius: 20px;
+}
+/* #nav-links {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
@@ -99,7 +136,7 @@ ul li a{
 
 #nav-links a {
     display: block;
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 10px 20px; /* Adjust padding as needed 
     border-radius: 6%;
 }
 
@@ -111,6 +148,54 @@ ul li a{
 
 a:hover {
     background-color: rgba(255, 255, 255, 0.301);
+}*/
+li:hover{
+  border-radius: 20px;
+  background-color: #ffffff73;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+@media (max-width: 1000px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 60px;
+      right: 0%;
+      background-color: #333;
+      max-width: 350px;
+      gap: 2rem;
+      padding-block: 2rem;
+  }
+
+  .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  .nav-links.active {
+      display: flex;
+      width: 100%;
+  }
+
+  .nav-links li:hover{
+      display: inline-block;
+  }
 }
 /* navbar end */
 

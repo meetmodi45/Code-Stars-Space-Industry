@@ -35,3 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const video = document.getElementById('bg-video');
+
+// hamburger
+const hamburger = document.querySelector('.hamburger')
+hamburger.addEventListener('click', function() {
+  const navLinks = document.querySelector(".nav-links");
+  navLinks.classList.toggle('active');
+});
