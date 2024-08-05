@@ -10,7 +10,6 @@ const questions = [
 
          ]
     },
-
     {
         question: "What is the largest moon in the Solar System?",
         answers: [

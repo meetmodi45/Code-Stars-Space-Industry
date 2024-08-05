@@ -80,31 +80,27 @@ let thumbnails = document.querySelectorAll('.thumbnail .item');
 // config param
 let countItem = items.length;
 let itemActive = 0;
-
 // event next click
-next.onclick = function() {
+next.onclick = function(){
     itemActive = itemActive + 1;
-    if (itemActive >= countItem) {
+    if(itemActive >= countItem){
         itemActive = 0;
     }
     showSlider();
 }
-
-// event prev click
-prev.onclick = function() {
+//event prev click
+prev.onclick = function(){
     itemActive = itemActive - 1;
-    if (itemActive < 0) {
+    if(itemActive < 0){
         itemActive = countItem - 1;
     }
     showSlider();
 }
-
 // auto run slider
 let refreshInterval = setInterval(() => {
     next.click();
-}, 5000);
-
-function showSlider() {
+}, 5000)
+function showSlider(){
     // remove item active old
     let itemActiveOld = document.querySelector('.slider .list .item.active');
     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
@@ -119,7 +115,7 @@ function showSlider() {
     clearInterval(refreshInterval);
     refreshInterval = setInterval(() => {
         next.click();
-    }, 5000);
+    }, 5000)
 }
 
 // click thumbnail
@@ -127,12 +123,65 @@ thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
         itemActive = index;
         showSlider();
-    });
-});
+    })
+})
 
 // hamburger
   const hamburger = document.querySelector('.hamburger')
   hamburger.addEventListener('click', function() {
     const navLinks = document.querySelector(".nav-links");
     navLinks.classList.toggle('active');
+});
+
+// about us
+let currentOpenIndex = null;
+
+        function toggleAnswer(index) {
+            const currentAnswer = document.getElementById(`answer-${index}`);
+            const currentArrow = document.getElementById(`arrow-${index}`);
+
+            if (currentOpenIndex !== null && currentOpenIndex !== index) {
+                const prevAnswer = document.getElementById(`answer-${currentOpenIndex}`);
+                const prevArrow = document.getElementById(`arrow-${currentOpenIndex}`);
+                prevAnswer.style.display = 'none';
+                prevArrow.classList.remove('up');
+                prevArrow.classList.add('down');
+            }
+
+            if (currentAnswer.style.display === 'block') {
+                currentAnswer.style.display = 'none';
+                currentArrow.classList.remove('up');
+                currentArrow.classList.add('down');
+                currentOpenIndex = null;
+            } else {
+                currentAnswer.style.display = 'block';
+                currentArrow.classList.remove('down');
+                currentArrow.classList.add('up');
+                currentOpenIndex = index;
+            }
+        }
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var name = document.getElementById('subject').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var message = document.getElementById('message').value.trim();
+    var button = e.target.querySelector('button');
+
+    button.classList.remove('animate', 'success', 'error');
+
+    if (name === "" || email === "" || message === "") {
+        button.classList.add('animate', 'error');
+        setTimeout(function(){
+            // location.reload();
+            alert("Please fill out all fields.");
+        }, 3000);  // delay to match the error animation duration
+    } else {
+        button.classList.add('animate', 'success');
+        setTimeout(function(){
+            location.reload();
+            alert("Thank You for contacting us!");
+        }, 3000);  // delay to allow success animation to complete
+    }
 });
