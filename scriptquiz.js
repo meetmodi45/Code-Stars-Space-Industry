@@ -307,3 +307,16 @@ nextbtn.addEventListener("click", () =>{
 })
 
 startquiz();
+// show the loader initially
+document.querySelector('.loader').style.display = 'flex';
+
+// hide the loader after 2 seconds and show the quiz
+setTimeout(() => {
+  document.querySelector('.loader').style.opacity = 0; // fade out loader
+  setTimeout(() => {
+    document.querySelector('.loader').style.display = 'none'; // hide loader after fade out
+  }, 500);
+  
+  document.querySelector('.quiz').style.display = 'block';
+  document.querySelector('.quiz').style.opacity = 1; // fade in quiz
+}, 1500);

@@ -1,12 +1,41 @@
-
-
 body{
-  
-  
   background-image: url(image/bg.jpg);
-  
-  
+ }
+
+ h1 {
+  margin: 0;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  padding-bottom: 1rem;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  animation: glow 2s ease-in-out infinite alternate;
+  text-align: center;
+}
+a {
+  font-family: 'Teko', sans-serif;
+  color: #4db1bc;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+  padding-bottom: 1rem;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #000000da;
   }
+  to {
+    text-shadow: 0 0 30px #f8f8f8d1, 0 0 10px #ae86b8d2;
+  }
+}
+
+
   .loader {
     position: fixed;
     top: 0;
@@ -98,7 +127,7 @@ background-color: rgba(95, 103, 110, 0.482);
 width: 90%;
 max-width: 700px;
 border-radius: 10px;
-margin: 200px auto 0;
+margin: 150px auto 0;
 margin-bottom: 50px;
 padding: 30px;
 display: block;
