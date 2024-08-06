@@ -62,14 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Navbar hide/show on scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) { // adjust the value to your needs
-            navbar.classList.add('hide');
-        } else {
-            navbar.classList.remove('hide');
-        }
-    });
+    // const navbar = document.getElementById('navbar');
+    // window.addEventListener('scroll', () => {
+    //     if (window.scrollY > 20) { // adjust the value to your needs
+    //         navbar.classList.add('hide');
+    //     } else {
+    //         navbar.classList.remove('hide');
+    //     }
+    // });
 });
 
 let items = document.querySelectorAll('.slider .list .item');
@@ -127,42 +127,42 @@ thumbnails.forEach((thumbnail, index) => {
 })
 
 // hamburger
-  const hamburger = document.querySelector('.hamburger')
-  hamburger.addEventListener('click', function() {
-    const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle('active');
-});
+//   const hamburger = document.querySelector('.hamburger')
+//   hamburger.addEventListener('click', function() {
+//     const navLinks = document.querySelector(".nav-links");
+//     navLinks.classList.toggle('active');
+// });
 
 // about us
 let currentOpenIndex = 6; // Set the default open index to 6 (7th item)
 
-function toggleAnswer(index) {
-    const currentAnswer = document.getElementById(`answer-${index}`);
-    const currentArrow = document.getElementById(`arrow-${index}`);
+        function toggleAnswer(index) {
+            const currentAnswer = document.getElementById(`answer-${index}`);
+            const currentArrow = document.getElementById(`arrow-${index}`);
 
-    if (currentOpenIndex !== null && currentOpenIndex !== index) {
-        const prevAnswer = document.getElementById(`answer-${currentOpenIndex}`);
-        const prevArrow = document.getElementById(`arrow-${currentOpenIndex}`);
-        prevAnswer.style.display = 'none';
-        prevArrow.classList.remove('up');
-        prevArrow.classList.add('down');
-    }
+            if (currentOpenIndex !== null && currentOpenIndex !== index) {
+                const prevAnswer = document.getElementById(`answer-${currentOpenIndex}`);
+                const prevArrow = document.getElementById(`arrow-${currentOpenIndex}`);
+                prevAnswer.style.display = 'none';
+                prevArrow.classList.remove('up');
+                prevArrow.classList.add('down');
+            }
 
-    if (currentAnswer.style.display === 'block') {
-        currentAnswer.style.display = 'none';
-        currentArrow.classList.remove('up');
-        currentArrow.classList.add('down');
-        currentOpenIndex = null;
-    } else {
-        currentAnswer.style.display = 'block';
-        currentArrow.classList.remove('down');
-        currentArrow.classList.add('up');
-        currentOpenIndex = index;
-    }
-}
-
+            if (currentAnswer.style.display === 'block') {
+                currentAnswer.style.display = 'none';
+                currentArrow.classList.remove('up');
+                currentArrow.classList.add('down');
+                currentOpenIndex = null;
+            } else {
+                currentAnswer.style.display = 'block';
+                currentArrow.classList.remove('down');
+                currentArrow.classList.add('up');
+                currentOpenIndex = index;
+            }
+        }
 // Add this line to open the 7th item by default when the page loads
 toggleAnswer(1);
+
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var name = document.getElementById('name').value.trim();
@@ -186,7 +186,4 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
             alert("Thank You for contacting us!");
         }, 3000);  // delay to allow success animation to complete
     }
-});
-particlesJS.load('particles-js', 'path/to/particles.json', function() {
-    console.log('Particle.js loaded');
 });

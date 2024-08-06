@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show the overlay content after 2 seconds
   setTimeout(() => {
     overlay.classList.add('show');
-  }, 1500);
+  }, 1000);
 });
 
 const video = document.getElementById('bg-video');
