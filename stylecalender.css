@@ -73,33 +73,6 @@ a:hover {
   height: 12vh; /* new height on hover */
 }
 
-/* ul{
-    margin: 0;
-    padding: 0;
-display: flex;
-}
-ul li{
-    list-style: none;
-}
-ul li a{
-    color:white;
-    font-size: 1.2em;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-} */
-/* .brand{
-     font-size: 1.3em;
-     color:white;
-     font-weight: bold;
-     text-decoration: none;
-     transition: background-color 0.3s ease;
-     padding: 10px 30px;
-     border-radius: 20px;
-} */
-
 .nav-links{
   display: flex;
   list-style: none;
@@ -127,28 +100,7 @@ ul li a{
    padding: 10px 20px;
    border-radius: 20px;
 }
-/* #nav-links {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    border-radius: 10%;
-}
 
-#nav-links a {
-    display: block;
-    padding: 10px 20px; /* Adjust padding as needed 
-    border-radius: 6%;
-}
-
-#nav-links h4 {
-    margin: 0;
-    font-size: 19px;
-    display: inline;
-}
-
-a:hover {
-    background-color: rgba(255, 255, 255, 0.301);
-}*/
 li:hover{
   border-radius: 20px;
   background-color: #ffffff73;
@@ -199,6 +151,27 @@ li:hover{
 }
 /* navbar end */
 
+/* heading */
+.console-container {
+ 
+  font-family: 'Orbitron', sans-serif;
+  text-align:center;
+  font-size: 3rem;
+  display:block;
+  font-weight: bolder;
+  position:relative;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding: 2%;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+}
 
 /* event gird */
 .events-grid {
@@ -215,6 +188,7 @@ li:hover{
     background-size: cover;
     background-position: center;
     height: 300px;
+    font-size: 1rem;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px #ffffff7c;
@@ -276,14 +250,20 @@ li:hover{
     color: #010101ba;
 }
 
+/* footer */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-weight: bolder;
+  height: 10%;
+  font-family: Poppins;
+  padding-top: 1rem;
+  position: relative;
 }
 
 /* responsive */
@@ -305,6 +285,9 @@ footer {
     }
     .close-btn {
       padding: 5px 10px;
+    }
+    .console-container{
+      font-size: 2rem;
     }
   }
   
