@@ -282,7 +282,7 @@ li:hover {
         margin: -100px 0 0 -50px;
         padding: 50px;
         padding-top: 125px;
-        
+
         background: #ededed;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
@@ -1349,87 +1349,35 @@ form textarea:hover {
     cursor: none;
 }
 
-
-@keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg) scale(1);
-    }
-
-    90% {
-        transform: translate(-50%, -50%) rotate(1080deg) scale(1);
-    }
-
-    100% {
-        transform: scale(0);
-    }
+.button {
+    display: inline-block;
+    width: 180px;
+    margin: 2% 12% 0 0 ;
+    background: rgb(0 107 179);
+    font-family: 'Orbitron', sans-serif;
+    color: #fefefe;
+    font-size: 1.9em;
+    padding: 0.5em;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 40px;
+    transition: border-radius linear 0.05s, width linear 0.05s;
 }
-
-@keyframes success {
-    from {
-        transform: translate(-50%, -50%) rotate(0) scale(0);
-    }
-
-    to {
-        transform: translate(-50%, -50%) rotate(-45deg) scale(1);
-    }
-}
-
-@keyframes error {
-    from {
-        transform: translate(-50%, -50%) scale(0);
-    }
-
-    to {
-        transform: translate(-50%, -50%) scale(1);
-        background-color: #f44336;
-    }
-}
-
-@keyframes vibrate {
-
-    0%,
-    30%,
-    60%,
-    85%,
-    100% {
-        left: 0;
-        background-color: #f44336;
-    }
-
-    10%,
-    40%,
-    90%,
-    70% {
-        left: -2px;
-        background-color: #f44336;
-    }
-
-    20%,
-    50%,
-    80%,
-    95% {
-        left: 2px;
-        background-color: #f44336;
-    }
-}
-
-#button2 {
-    margin-top: 15%;
-    margin-left: 32%;
-}
-
-#button2:focus {
+.button:focus {
     outline: 0;
 }
-
-#button2.animate {
+.button.animate {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     color: transparent;
 }
-
-#button2.animate:after {
+.button.animate:after {
     position: absolute;
     content: '';
     width: 25px;
@@ -1443,8 +1391,7 @@ form textarea:hover {
     transform: translate(-50%, -50%);
     animation: spin 2.5s ease-in forwards;
 }
-
-#button2.success:before {
+.button.success:before {
     position: absolute;
     content: '';
     width: 25px;
@@ -1459,13 +1406,11 @@ form textarea:hover {
     animation: success 0.15s ease-in forwards;
     animation-delay: 2.5s;
 }
-
-#button2.error {
+.button.error {
     animation: vibrate 0.5s ease-in forwards;
     animation-delay: 2.5s;
 }
-
-#button2.error:before {
+.button.error:before {
     color: #fff;
     position: absolute;
     content: '!';
@@ -1478,44 +1423,38 @@ form textarea:hover {
     animation: error 0.5s ease-in forwards;
     animation-delay: 2.5s;
 }
-
+.button:hover{
+    cursor:none;
+}
 @keyframes spin {
     0% {
         transform: translate(-50%, -50%) rotate(0deg) scale(1);
     }
-
     90% {
         transform: translate(-50%, -50%) rotate(1080deg) scale(1);
     }
-
     100% {
         transform: scale(0);
     }
 }
-
 @keyframes success {
     from {
         transform: translate(-50%, -50%) rotate(0) scale(0);
     }
-
     to {
         transform: translate(-50%, -50%) rotate(-45deg) scale(1);
     }
 }
-
 @keyframes error {
     from {
         transform: translate(-50%, -50%) scale(0);
     }
-
     to {
         transform: translate(-50%, -50%) scale(1);
         background-color: #f44336;
     }
 }
-
 @keyframes vibrate {
-
     0%,
     30%,
     60%,
@@ -1524,7 +1463,6 @@ form textarea:hover {
         left: 0;
         background-color: #f44336;
     }
-
     10%,
     40%,
     90%,
@@ -1532,7 +1470,6 @@ form textarea:hover {
         left: -2px;
         background-color: #f44336;
     }
-
     20%,
     50%,
     80%,
@@ -1541,7 +1478,6 @@ form textarea:hover {
         background-color: #f44336;
     }
 }
-
 @media screen and (max-width: 650px) {
     .form-group {
         width: 100%;
