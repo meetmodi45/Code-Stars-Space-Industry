@@ -44,22 +44,28 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(backspace, 3700);
 
     // Cursor movement
-    const cursor = document.querySelector("#cursor");
-    document.addEventListener("mousemove", function (event) {
-        cursor.style.left = event.clientX - 20 + "px";
-        cursor.style.top = event.clientY - 20 + "px";
-    });
+    const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 
-    // Change cursor on link hover
-    const links = document.querySelectorAll("a");
-    links.forEach((link) => {
-        link.addEventListener("mouseover", () => {
-            cursor.style.backgroundImage = "url('image/cursor5.png')";
-        });
-        link.addEventListener("mouseout", () => {
-            cursor.style.backgroundImage = "url('image/cursor4.png')";
-        });
+if (isDesktop) {
+  const cursor = document.querySelector("#cursor");
+
+  // Move cursor on mousemove
+  document.addEventListener("mousemove", (event) => {
+    cursor.style.left = `${event.clientX}px`;
+    cursor.style.top = `${event.clientY}px`;
+  });
+
+  // Change cursor on link hover
+  const links = document.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("mouseover", () => {
+      cursor.style.backgroundImage = "url('image/cursor5.png')";
     });
+    link.addEventListener("mouseout", () => {
+      cursor.style.backgroundImage = "url('image/cursor4.png')";
+    });
+  });
+}
 
     // Navbar hide/show on scroll
     // const navbar = document.getElementById('navbar');
