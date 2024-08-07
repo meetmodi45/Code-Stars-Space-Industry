@@ -27,6 +27,7 @@ body {
     width: 100vw;
 }
 
+@media (min-width:480px) {
 #cursor {
     height: 40px;
     width: 30px;
@@ -37,6 +38,7 @@ body {
     background-image: url('image/cursor4.png');
     background-size: cover;
     background-repeat: no-repeat;
+}
 }
 
 a {
@@ -68,7 +70,12 @@ a:hover {
     transition: top 0.5s ease;
     gap: 15%;
 }
-
+.hide {
+    display: none;
+  }
+  #navbar.hide {
+    top: -100px; /* Adjust this value based on your navbar height */
+}
 /* navbar animation */
 /* #navbar {
     transition: height 0.2s ease-in-out; /* optional transition 
