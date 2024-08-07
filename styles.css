@@ -1043,7 +1043,6 @@ li:hover {
 .page4 {
     display: flex;
     flex-wrap: wrap;
-    /* height: 100%; */
     background-color: #000;
     width: 100%;
     margin: 0 auto;
@@ -1421,7 +1420,11 @@ form textarea:hover {
   .footer-distributed .footer-left{
     width: 40%;
   }
-  
+
+  .footer-distributed .footer-icons a:hover {
+    cursor: none;
+  }
+
   /* The company logo */
   
   .footer-distributed h3{
@@ -1577,7 +1580,7 @@ form textarea:hover {
       margin-bottom: 40px;
       text-align: center;
     }
-  
+    
     .footer-distributed .footer-center i{
       margin-left: 0;
     }
