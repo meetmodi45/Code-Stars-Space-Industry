@@ -7,33 +7,41 @@
     <title>Stargazing-Calender 2024</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylecalender.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body style="overflow-x: hidden;">
     <!-- Background Video -->
     <video id="background-video" autoplay muted loop>
-        <source src="images/intro.webm" type="video/mp4">
+        <source src="images/intro.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <!-- Overlay Content -->
     <div class="overlay">
-        <header>
-            <nav id="navbar">
-                <a href="index.html" class="brand">CodeStars</a>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#slider">ACHIEVEMENTS</a></li>
-                    <li><a href="#page3">STARGAZING-CALENDER</a></li>
-                    <li><a href="#page2">QUIZ</a></li>
-                    <li><a href="#page4">ABOUT US</a></li>
+        <nav id="navbar" class="hide">
+            <a href="#page1" class="brand">CodeStars</a>
+            <ul class="nav-links">
+                <li><a href="index.html#slider-page">ACHIEVEMENTS</a></li>
+                <li><a href="index.html#page3">STARGAZING-CALENDER</a></li>
+                <li><a href="index.html#page2">QUIZ</a></li>
+                <li><a href="index.html#page5">FAQ</a></li>
+                <li><a href="index.html#page4">ABOUT US</a></li>
+            </ul>
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li><a href="index.html#slider-page">ACHIEVEMENTS</a></li>
+                    <li><a href="index.html#page3">STARGAZING-CALENDER</a></li>
+                    <li><a href="index.html#page2">QUIZ</a></li>
+                    <li><a href="index.html#page4">ABOUT US</a></li>
+                    <li><a href="index.html#page5">FAQ</a></li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
             <div class='console-container'><span id='text'></span>
@@ -179,9 +187,68 @@
             </section>
         </main>
 
-        <footer>
-            <p>Made with ❤️ by CodeStars • © 2024</p>
-        </footer>
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+      
+              <h3>Code<span>Stars</span></h3>
+      
+              <p class="footer-links">
+                <a href="#page1">Home</a>
+                
+                <a href="#slider-page">Achievements</a>
+              
+                <a href="#page3">Calender</a>
+              
+                <a href="#page2">Quiz</a>
+                
+                <a href="#page5">FAQ</a>
+                
+                <a href="#page4">Contact</a>
+              </p>
+      
+              <p class="footer-company-name">CodeStars © 2024</p>
+            </div>
+      
+            <div class="footer-center">
+      
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>CodeStars GROUP</span> SVNIT,Surat</p>
+              </div>
+      
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 9054186196</p>
+              </div>
+      
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">codestarhead@gmail.com</a></p>
+              </div>
+      
+            </div>
+      
+            <div class="footer-right">
+      
+              <p class="footer-company-about">
+                <span>About the company</span>
+                Our aim is to develop interest in space field and make a user friendly space website.
+              </p>
+      
+              <div class="footer-icons">
+      
+                <a href="https://www.instagram.com/modimeet_45/" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/meet-modi-895175248" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/meetmodi45" target="_blank"><i class="fab fa-github"></i></a>
+      
+              </div>
+      
+            </div>
+      
+          </footer>
     </div>
     <script src="scriptcalender.js"></script>
 </body>

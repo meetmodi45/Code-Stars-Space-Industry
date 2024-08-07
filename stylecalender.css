@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
 body {
   font-family: 'Orbitron', sans-serif;
   margin: 0;
@@ -41,12 +43,9 @@ a {
   color: white;
 }
 
-a:hover {
-  color: #f4f4f4;
-}
 
+/* navbar css */
 #navbar {
-
   height: 10vh;
   width: 100%;
   color: white;
@@ -56,28 +55,24 @@ a:hover {
   align-items: center;
   font-family: 'Orbitron', sans-serif;
   position: fixed;
-  /* Ensure position is fixed */
   top: 0;
   padding: 0 1%;
   box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.733);
   z-index: 99;
-  background-color: rgba(0, 0, 0, 0.432);
   flex-wrap: nowrap;
   transition: top 0.5s ease;
   gap: 15%;
 }
 
 /* navbar animation */
-#navbar {
-  transition: height 0.2s ease-in-out;
-  /* optional transition */
-}
+/* #navbar {
+  transition: height 0.2s ease-in-out; /* optional transition 
+} */
 
-#navbar:hover {
-  height: 12vh;
-  /* new height on hover */
-}
-
+/* #navbar:hover {
+  height: 12.92vh; /* new height on hover 
+} */
 .nav-links {
   display: flex;
   list-style: none;
@@ -87,7 +82,7 @@ a:hover {
 
 .navlinks a {
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-decoration: none;
   font-weight: bolder;
   padding: 10px 10px;
@@ -106,6 +101,12 @@ a:hover {
   border-radius: 20px;
 }
 
+/*next two are for hover background  */
+/* #navbar a:hover {
+   /* background-color: rgba(255, 255, 255, 0.301); 
+   border-radius: 20px;
+} */
+
 li:hover {
   border-radius: 20px;
   background-color: #ffffff73;
@@ -123,37 +124,149 @@ li:hover {
   margin: 4px 0;
 }
 
-@media (max-width: 1000px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 60px;
-    right: 0%;
-    background-color: #333;
-    max-width: 350px;
-    gap: 2rem;
-    padding-block: 2rem;
+#menuToggle{
+  display: none;
+}
+@media (max-width: 890px) {
+  .nav-links{
+      display: none;
+  }
+  #navbar{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+  }
+  #menuToggle {
+      display: block;
+      position: relative;
+      top: 8px;
+      left: 10px;
+      z-index: 100;
+      -webkit-user-select: none;
+      user-select: none;
   }
 
-  .nav-links li {
-    text-align: center;
-    margin: 10px 0;
+  #menuToggle a {
+      text-decoration: none;
+      color: #232323;
+      font-size: 0.8em;
+      transition: color 0.3s ease;
+      
   }
 
-  .hamburger {
-    display: flex;
+  #menuToggle a:hover {
+      color: tomato;
+      
   }
 
-  .nav-links.active {
-    display: flex;
-    width: 100%;
+
+  #menuToggle input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+
+      cursor: pointer;
+
+      opacity: 0;
+      /* hide this */
+      z-index: 2;
+      /* and place it over the hamburger */
+
+      -webkit-touch-callout: none;
   }
 
-  .nav-links li:hover {
-    display: inline-block;
+  /*
+* Just a quick hamburger
+*/
+  #menuToggle span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #cdcdcd;
+      border-radius: 3px;
+      
+      z-index: 1;
+
+      transform-origin: 4px 0px;
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+          background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+          opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+  }
+
+  /* 
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
+  #menuToggle input:checked~span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323;
+  }
+
+  /*
+* But let's hide the middle one.
+*/
+  #menuToggle input:checked~span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+* Ohyeah and the last one should go the other direction
+*/
+  #menuToggle input:checked~span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+  #menu {
+      position: absolute;
+      width: 300px;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+
+      background: #ededed;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  #menu li {
+      padding: 10px 0;
+      font-size: 22px;
+  }
+
+  /*
+* And let's slide it in from the left
+*/
+  #menuToggle input:checked~ul {
+      transform: none;
   }
 }
+
 
 /* navbar end */
 
@@ -259,21 +372,191 @@ li:hover {
 }
 
 /* footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #000000;
-  color: white;
-  position: relative;
-  bottom: 0;
+  
+.footer-distributed{
+  background: #221e1e;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
   width: 100%;
-  font-weight: bolder;
-  height: 10%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
   font-family: Poppins;
-  padding-top: 1rem;
-  position: relative;
 }
 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Poppins', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  font-family: Poppins;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  font-family: Poppins;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  lightseagreen;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
 /* responsive */
 /* Mobile devices (portrait and landscape) */
 @media only screen and (max-width: 767px) {
