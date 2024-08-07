@@ -458,6 +458,26 @@
             duration: 400,
         });
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var navbar = document.getElementById('navbar');
+        var lastScrollTop = 0;
+    
+        window.addEventListener('scroll', function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                navbar.classList.add('hide');
+            } else {
+                // Scrolling up
+                navbar.classList.remove('hide');
+            }
+    
+            lastScrollTop = scrollTop;
+        });
+    });
+    </script>
 </body>
 
 </html>
