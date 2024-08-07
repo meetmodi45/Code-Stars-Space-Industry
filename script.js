@@ -156,27 +156,3 @@ function toggleAnswer(index) {
 // Add this line to open the 7th item by default when the page loads
 toggleAnswer(1);
 
-// document.getElementById('contact-form').addEventListener('submit', function (e) {
-//     e.preventDefault();
-//     var name = document.getElementById('name').value.trim();
-//     var name = document.getElementById('subject').value.trim();
-//     var email = document.getElementById('email').value.trim();
-//     var message = document.getElementById('message').value.trim();
-//     var button = e.target.querySelector('button');
-
-//     button.classList.remove('animate', 'success', 'error');
-
-//     if (name === "" || email === "" || message === "") {
-//         button.classList.add('animate', 'error');
-//         setTimeout(function () {
-//             location.reload();
-//             alert("Please fill out all fields.");
-//         }, 3000);  // delay to match the error animation duration
-//     } else {
-//         button.classList.add('animate', 'success');
-//         setTimeout(function () {
-//             location.reload();
-//             alert("Thank You for contacting us!");
-//         }, 3000);  // delay to allow success animation to complete
-//     }
-// });
