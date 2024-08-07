@@ -247,15 +247,6 @@ li:hover {
   animation: glow 2s ease-in-out infinite alternate;
   text-align: center;
 }
-/* a {
-  font-family: 'Teko', sans-serif;
-  color: #4db1bc;
-  grid-column: 1;
-  grid-row: 1;
-  align-self: end;
-  justify-self: center;
-  padding-bottom: 1rem;
-} */
 
 @keyframes glow {
   from {

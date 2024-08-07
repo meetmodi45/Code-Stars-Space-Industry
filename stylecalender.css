@@ -271,26 +271,28 @@ li:hover {
 /* navbar end */
 
 /* heading */
-.console-container {
-
-  font-family: 'Orbitron', sans-serif;
-  text-align: center;
-  font-size: 3rem;
-  display: block;
+h1 {
+  margin: 0;
   font-weight: bolder;
-  position: relative;
-  color: white;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2%;
-  margin: auto;
+  color: rgb(255, 255, 255);
+  padding-bottom: 1rem;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  animation: glow 2s ease-in-out infinite alternate;
+  text-align: center;
 }
 
-.console-underscore {
-  display: inline-block;
-  position: relative;
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #000000da;
+  }
+  to {
+    text-shadow: 0 0 30px #f8f8f8d1, 0 0 10px #ae86b8d2;
+  }
 }
 
 /* event gird */
